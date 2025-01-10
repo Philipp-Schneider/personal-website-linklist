@@ -1,3 +1,31 @@
 baseURL = 'https://example.org/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Philipp Schneider'
+
+
+[module]
+  [[module.imports]]
+    path = "github.com/jpanther/lynx"
+
+enableEmoji = true
+disableKinds = ["taxonomy", "term"]
+
+[params.author]
+  name = "Philipp Schneider"
+  headline = "Digital History"
+  image = "author.jpg"
+  links = [
+    { link = { href = "https://www.geschichte.hu-berlin.de/de/bereiche-und-lehrstuehle/digital-history/personen/philipp-schneider-m-a", text = "Academic CV" } },
+    { mastodon = "https://fedihum.org/@cliotex" },
+    { orcid = "https://orcid.org/0000-0002-6743-8600" },
+    { github = "https://github.com/Philipp-Schneider" },
+    { bluesky = "https://bsky.app/profile/cliotex.fedihum.org.ap.brid.gy" },
+    { link = { href = "https://digitalheraldry.org/", text = "Digital Heraldry" } }
+  ]
+
+[markup.highlight]
+  noClasses = false
+
+[markup.goldmark]
+[markup.goldmark.renderer]
+  unsafe = true
